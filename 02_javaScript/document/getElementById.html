@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>getElementById</title>
+	<script type="text/javascript">
+		function onclickFun() {
+			//1.我们要操作一个标签的时候，一定要先获取这个标签对象
+			var usernameObj = document.getElementById("username");
+			//alert(usernameObj);
+			//[object HTMLInputElement] ，它就是dom对象
+			//alert(usernameObj.id);
+			//alert(usernameObj.type);
+			//alert(usernameObj.value);
+			var usernameText= usernameObj.value;
+			//验证字符串是否符合某个规则，需要使用正则表达式
+			var pattern=/^\w{5,12}$/;
+			/*
+			* test()方法用于测试某个字符串，是否匹配指定规则
+			* 匹配返回true，不匹配返回false
+			*/
+			
+			var usernameSpanObj = document.getElementById("usernameSpan");
+			//alert(usernameSpanObj);	//[object HTMLSpanElement]
+			//innerHTML 表示起始标签和结束标签中的内容
+			//innerHTML 这个属性可读 可写
+			//alert(usernameSpanObj.innerHTML);
+			
+			if(pattern.test(usernameText)){
+				//alert("用户名合法！");
+				//usernameSpanObj.innerHTML="用户名合法";
+				usernameSpanObj.innerHTML="<img src=\"ok.jpg\" width =\"18\" height=\"18\"/>";
+			} else {
+				//alert("用户名不合法！");
+				//usernameSpanObj.innerHTML="用户名不合法";
+				usernameSpanObj.innerHTML="<img src=\"no.jpeg\" style=\"zoom:20%;\"/>";
+			}
+		}
+	</script>
+</head>
+<body>
+	用户名：<input type="text" id="username" value="xsc"/>
+	<span id="usernameSpan"></span>
+	<button onclick="onclickFun();"> 校验</button>/
+</body>
+</html>

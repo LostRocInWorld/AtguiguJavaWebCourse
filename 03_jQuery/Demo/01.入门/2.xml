@@ -1,0 +1,92 @@
+<select id="getInputByEtl" parameterType="Map" resultType="Map">
+    SELECT SUM (PASS) + SUM (FAIL) INPUT,GRP,SUM (RWREALLPOINT) RWREALLPOINT,STEPNM,RIDX,RTYPE2 FROM (
+    <foreach collection="dblist" index="index" item="db" open="" close="" separator="UNION ALL">
+        SELECT PASS,FAIL,WIP.GRP,ROUTE_STEP.STEPNM,WIP.MO,RIDX,ROUTE_STEPF.RTYPE2,RWREALLPOINT FROM WIP${db}, ROUTE_STEP${db}
+        WHERE WIP.MO NOT LIKE 'T%' AND ROUTE_STEP.GRP = WIP.GRP AND WIP.ROUTE = ROUTE_STEP.ROUTE AND ROUTE_STEP.RTYPE2 = 'N'
+        <if test="itemlist!=null">
+            <foreach collection="itemlist" index="index" item="item" open=" AND WIP.ITEM IN (" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+        <if test='ROUTE!=null and ROUTE!="ALL"'>
+            AND WIP.ROUTE = #{ROUTE}
+        </if>
+        <if test='LINE!=null and LINE!="ALL"'>
+            AND WIP.LINE = #{LINE}
+        </if>
+        <if test="molist!=null">
+            <foreach collection="molist" index="index" item="mo" open=" AND WIP.MO IN (" separator="," close=")">
+                #{mo}
+            </foreach>
+        </if>
+        AND WIP.INTIME BETWEEN TO_DATE (#{SDATE},'MM/DD/YYYY HH24:MI')
+        AND TO_DATE (#{EDATE},'MM/DD/YYYY HH24:MI')
+    </foreach>
+    ) GROUP BY GRP,STEPNM,RIDX,RTYPE2 ORDER BY RIDX
+</select>
+
+
+<select id="getFirstDefectByEtl" parameterType="Map" resultType="Map">
+SELECT GRP,FIRSTDEFECT FROM (
+<foreach collection="dblist" index="index" item="db" open="" close="" separator="UNION ALL">
+    SELECT SNERR.GRP, COUNT(DISTINCT SN) FIRSTDEFECT FROM SNERR${db}, ROUTE_STEP${db}
+    WHERE ROUTE_STEP.STEP = SNERR.STEP AND ROUTE_STEP.GRP = SNERR.GRP
+    <if test="itemlist!=null">
+        <foreach collection="itemlist" index="index" item="item" open=" AND SNERR.ITEM IN (" separator="," close=")">
+            #{item}
+        </foreach>
+    </if>
+    <if test='ROUTE!=null and ROUTE!="ALL"'>
+        AND SNERR.ROUTE = #{ROUTE}
+    </if>
+    <if test='LINE!=null and LINE!="ALL"'>
+        AND SNERR.LINE = #{LINE}
+    </if>
+    <if test='GRP!=null and GRP!="ALL"'>
+        AND SNERR.GRP = #{GRP}
+    </if>
+    <if test="molist!=null">
+        <foreach collection="molist" index="index" item="mo" open=" AND SNERR.MO IN (" separator="," close=")">
+            #{mo}
+        </foreach>
+    </if>
+    AND SNERR.TESTTIME BETWEEN TO_DATE (#{SDATE},'MM/DD/YYYY HH24:MI')
+    AND TO_DATE  (#{EDATE},'MM/DD/YYYY HH24:MI')
+    GROUP BY SNERR.GRP
+</foreach>
+) ORDER BY GRP
+</select>
+
+
+<select id="getFinalDefectByEtl" parameterType="Map" resultType="Map">
+SELECT GRP,FINALDEFECT FROM (
+<foreach collection="dblist" index="index" item="db" open="" close="" separator="UNION ALL">
+    SELECT SNERR.GRP, COUNT (DISTINCT SN) FINALDEFECT FROM SNERR${db}, ROUTE_STEP${db}
+    <![CDATA[WHERE (SNERR.STATUS <> '3' AND SNERR.STATUS <> '5' AND SNERR.STATUS <> '2') AND SNERR.STEP = ROUTE_STEP.STEP]]>
+    AND SNERR.ROUTE = ROUTE_STEP.ROUTE AND ROUTE_STEP.GRP = SNERR.GRP
+    <if test="itemlist!=null">
+        <foreach collection="itemlist" index="index" item="item" open=" AND SNERR.ITEM IN (" separator="," close=")">
+            #{item}
+        </foreach>
+    </if>
+    <if test='ROUTE!=null and ROUTE!="ALL"'>
+        AND SNERR.ROUTE = #{ROUTE}
+    </if>
+    <if test='LINE!=null and LINE!="ALL"'>
+        AND SNERR.LINE = #{LINE}
+    </if>
+    <if test='GRP!=null and GRP!="ALL"'>
+        AND SNERR.GRP = #{GRP}
+    </if>
+    <if test="molist!=null">
+        <foreach collection="molist" index="index" item="mo" open=" AND SNERR.MO IN (" separator="," close=")">
+            #{mo}
+        </foreach>
+    </if>
+    AND SNERR.TESTTIME BETWEEN TO_DATE (#{SDATE},'MM/DD/YYYY HH24:MI')
+    AND TO_DATE  (#{EDATE},'MM/DD/YYYY HH24:MI')
+    GROUP BY SNERR.GRP
+</foreach>
+) ORDER BY GRP
+</select>
+

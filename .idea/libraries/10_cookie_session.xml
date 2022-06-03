@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="10_cookie_session">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/10_cookie_session/src/main/webapp/WEB-INF/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/10_cookie_session/src/main/webapp/WEB-INF/lib" recursive="false" />
+  </library>
+</component>

@@ -1,0 +1,6 @@
+<!--
+    Context表示一个工程上下文
+    path表示工程的访问路径   /web03
+    docBase表示工程目录的位置
+-->
+<Context path="/web03" docBase="D:\IdeaJavaProject\JavaWebs\book_static" />

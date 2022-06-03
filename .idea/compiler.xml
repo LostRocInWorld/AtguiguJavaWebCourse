@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="10_cookie_session" />
+        <module name="books" />
+        <module name="05_Web" />
+        <module name="temp_verification_code" />
+        <module name="07_Servlet" />
+        <module name="08_JSP" />
+        <module name="06_Servlet" />
+        <module name="12_JSON_AJAX" />
+        <module name="09_EL_JSTL" />
+        <module name="Filter_11" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="05_Web" target="1.8" />
+      <module name="06_Servlet" target="1.8" />
+      <module name="07_Servlet" target="1.8" />
+      <module name="08_JSP" target="1.8" />
+      <module name="09_EL_JSTL" target="1.8" />
+      <module name="10_cookie_session" target="1.8" />
+      <module name="12_JSON_AJAX" target="1.8" />
+      <module name="books" target="1.8" />
+      <module name="filter_11" target="1.8" />
+      <module name="Filter_11" target="1.8" />
+      <module name="temp_verification_code" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

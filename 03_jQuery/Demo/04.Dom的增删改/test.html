@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //appenedTo()与prependTo()
+            // $("<h1>appenedTo div下的标题</h1>").appendTo("div");
+            // $("<h1>prependTo div下的标题</h1>").prependTo($("div"));
+
+            //insertAfter()与insertBefore()
+            // $("<h1>insertAfter div的标题</h1>").insertAfter("div");
+            // $("<h1>insertBefore div的标题</h1>").insertBefore($("div"));
+
+            //replaceWith()与replaceAll()
+            // $("div").replaceWith($("<h1>replaceWith div的标题</h1>"));
+            // $("<h1>replaceAll div的标题</h1>").replaceAll("div");
+
+            //remove()与empty()
+            $("div").remove();
+            // $("div").empty();
+
+        });
+    </script>
+</head>
+<body>
+多选：
+<input name="checkbox" type="checkbox" value="checkbox1"/>checkbox1
+<input name="checkbox" type="checkbox" value="checkbox2"/>checkbox2
+<input name="checkbox" type="checkbox" value="checkbox3"/>checkbox3
+<br/>
+<button id="attr">attr()方法设置第一个checkbox的name属性</button>
+<button id="prop">pro()方法设置第一个checkbox被选中</button>
+<br/><br/>
+<div>1234</div>
+<div>12345</div>
+</body>
+</html>

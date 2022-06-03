@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    以上就是xml文件的声明
+    version="1.0"   version表示xml的版本
+    encoding="utf-8"    表示xml文件本身的编码格式
+-->
+<books><!-- books 表示多个图书信息-->
+    <book sn="SN1234567789">    <!--book表示一个图书信息 sn属性表示图书的序列号-->
+        <name>时间简史</name>   <!-- name标签 表示书名-->
+        <author>霍金</author> <!--author  表示作者-->
+        <price>75</price>   <!--price 表示价格-->
+    </book>
+    <book sn="SN1234567790">    <!--book表示一个图书信息 sn属性表示图书的序列号-->
+        <name>Java从入门到入土</name>   <!-- name标签 表示书名-->
+        <author>嘤嘤怪</author> <!--author  表示作者-->
+        <price>9.9</price>   <!--price 表示价格-->
+    </book>
+    <![CDATA[这里的特殊字符没有被解析，如<> " ']]>
+    <xml>我可以吗？</xml>
+    <xmlbooks>我好像可以吗？</xmlbooks>
+</books>

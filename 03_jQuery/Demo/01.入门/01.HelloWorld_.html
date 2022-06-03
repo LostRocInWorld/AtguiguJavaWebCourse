@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Title</title>
+	<!-- 引入jQuery类库 -->
+	<script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+	<script type="text/javascript">
+		//window.onload=function(){
+		//	var btnObj = document.getElementById("btnId");	
+		//	//alert(btnObj)	//dom对象  [object HTMLButtonElement]
+		//	btnObj.onclick=function(){
+		//		alert("js原生的单击事件");
+		//	}
+		//}
+		alert($);	//测试是否正确引入jQuery类库
+		$(function() {//	表示页面加载完成之后，相当于window.onloadfunction(){}
+			var $btnObj = $("#btnId"); //表示按id查询标签对象
+			$btnObj.click(function(){
+				alert("jQuery单击事件")
+			});
+		});
+	</script>
+</head>
+<body>
+	<button id="btnId">SayHello</button>
+</body>
+</html>

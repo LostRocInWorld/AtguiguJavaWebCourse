@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+      $(function (){
+        //html()
+        //不穿参数是获取，传递参数是设置
+        // alert($("div").html());
+        // $("div").html("<h1>我是div中的标题</h1>"); //设置
+
+        //text()
+        // alert($("div").text());
+        // $("div").text("<h1>我是div中的标题</h1>");
+
+        //val()
+        // alert($("div").val());  //val只能获取表单项的value属性
+        $("button").click(function (){
+          alert($("#usernameid").val());
+          $("#usernameid").val("操作输入框内容");
+          alert($("#usernameid").attr("handover"));
+        });
+      });
+    </script>
+</head>
+<body>
+  <div>我是div标签<span>div中的span标签</span></div>
+<input type="text" name="username" id="usernameid" handover/>
+<button>操作输入框</button>
+</body>
+</html>

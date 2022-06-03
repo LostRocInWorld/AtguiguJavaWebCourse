@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>regexp</title>
+	<script type="text/javascript">
+		//1.表示要求字符串中，是否包含字母e
+		//var patt = new RegExp("e");
+		//var patt =/e/; //也是正则表达式对象
+		//alert(patt);
+		
+		//2.方括号
+		//表示要求字符串中，是否包含字母a或b或c
+		//var patt= /[abc]/;
+		
+		//表示要求字符串中，是否包含任意小写字母
+		//var patt= /[a-z]/;
+		
+		//表示要求字符串中，是否包含任意大写字母
+		//var patt= /[A-Z]/;
+		
+		//表示要求字符串中，是否包含任意数字
+		//var patt= /[0-9]/;
+		
+		//3.元字符
+		//\w 元字符用于查找单词字符。单词字符包括：a-z、A-Z、0-9，以及下划线, 包含 _ (下划线) 字符
+		//var patt= /\w/;
+		
+		//4.量词
+		//表示要求字符串中是否包含至少一个a
+		//var patt= /a+/;
+		
+		//表示要求字符串中是否包含零个或多个a
+		//var patt= /a*/;
+		
+		//表示要求字符串中是否包含零个或一个a
+		//var patt= /a?/;
+		
+		//表示要求字符串中是否包含连续3个a
+		//var patt= /a{3}/;
+		
+		//表示要求字符串中是否包含至少连续3个a，最多5个连续5个a
+		var patt= /a{3,5}/;
+		
+		//表示要求字符串中是否包含至少连续3个a
+		//var patt= /a{3,}/;
+		
+		//表示要求字符串中是否以a结尾
+		//var patt= /a$/;
+		
+		//表示要求字符串中是否以a开始
+		//var patt= /^a/;
+		
+		//要求字符串，从头到尾都必须完全匹配（^与$，精确匹配）
+		// var patt= /^a{3,5}$/;
+		
+		var str="aa2aa";
+		alert(patt.test(str));
+	</script>
+</head>
+<body>
+
+</body>
+</html>

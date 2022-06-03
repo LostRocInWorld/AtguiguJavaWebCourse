@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="servlet-api">
+    <CLASSES>
+      <root url="jar://E:/java_install/tomcat/apache-tomcat-8.0.50/lib/servlet-api.jar!/" />
+      <root url="jar://E:/java_install/tomcat/apache-tomcat-8.0.50/lib/jsp-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/java_install/tomcat/apache-tomcat-8.0.50-src.zip!/apache-tomcat-8.0.50-src/java" />
+      <root url="jar://E:/java_install/tomcat/apache-tomcat-8.0.50-src.zip!/apache-tomcat-8.0.50-src/modules/jdbc-pool/src/main/java" />
+      <root url="jar://E:/java_install/tomcat/apache-tomcat-8.0.50-src.zip!/apache-tomcat-8.0.50-src/modules/jdbc-pool/src/test/java" />
+      <root url="jar://E:/java_install/tomcat/apache-tomcat-8.0.50-src.zip!/apache-tomcat-8.0.50-src/test" />
+      <root url="jar://E:/java_install/tomcat/apache-tomcat-8.0.50-src.zip!/apache-tomcat-8.0.50-src/webapps/docs/appdev/sample/src" />
+      <root url="jar://E:/java_install/tomcat/apache-tomcat-8.0.50-src.zip!/apache-tomcat-8.0.50-src/webapps/examples/WEB-INF/classes" />
+      <root url="jar://E:/java_install/tomcat/apache-tomcat-8.0.50-src.zip!/apache-tomcat-8.0.50-src/webapps/examples/WEB-INF/jsp/applet" />
+      <root url="jar://E:/java_install/tomcat/apache-tomcat-8.0.50-src.zip!/apache-tomcat-8.0.50-src/webapps/examples/jsp/plugin/applet" />
+    </SOURCES>
+  </library>
+</component>

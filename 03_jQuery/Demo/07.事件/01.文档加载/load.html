@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            alert("原生js页面加载完成之后--1");
+        };
+
+        window.onload = function () {
+            alert("原生js页面加载完成之后--2");
+        };
+
+        window.onload = function () {
+            alert("原生js页面加载完成之后--3");
+        };
+
+        window.onload = function () {
+            alert("原生js页面加载完成之后--4");
+        };
+        //jQuery页面加载完成
+        // $(document).ready(function () {});
+
+        $(function (){
+            alert("jQuery页面加载完成之后--1");
+        });
+
+        $(function (){
+            alert("jQuery页面加载完成之后--2");
+        });
+
+        $(function (){
+            alert("jQuery页面加载完成之后--3");
+        });
+
+        $(function (){
+            alert("jQuery页面加载完成之后--4");
+        });
+    </script>
+
+</head>
+<body>
+<button>我是按钮</button>
+<iframe src="http://dict.psh.corp.pegatron/translation.php"></iframe>
+<img src="http://dict.psh.corp.pegatron/images/logo.gif" alt="图片找不到"/>
+</body>
+</html>

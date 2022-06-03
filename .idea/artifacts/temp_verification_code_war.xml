@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="temp_verification_code:war">
+    <output-path>$PROJECT_DIR$/temp_verification_code/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>temp_verification_code</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="temp_verification_code-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="temp_verification_code:war exploded" />
+    </root>
+  </artifact>
+</component>

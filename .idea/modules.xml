@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01_html_css/01_html_css.iml" filepath="$PROJECT_DIR$/01_html_css/01_html_css.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_javaScript/02_javascript.iml" filepath="$PROJECT_DIR$/02_javaScript/02_javascript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_jQuery/03_jQuery.iml" filepath="$PROJECT_DIR$/03_jQuery/03_jQuery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_XML/04_XML.iml" filepath="$PROJECT_DIR$/04_XML/04_XML.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_Web/05_Web.iml" filepath="$PROJECT_DIR$/05_Web/05_Web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_Servlet/06_Servlet.iml" filepath="$PROJECT_DIR$/06_Servlet/06_Servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07_Servlet/07_Servlet.iml" filepath="$PROJECT_DIR$/07_Servlet/07_Servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_JSP/08_JSP.iml" filepath="$PROJECT_DIR$/08_JSP/08_JSP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09_EL_JSTL/09_EL_JSTL.iml" filepath="$PROJECT_DIR$/09_EL_JSTL/09_EL_JSTL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10_cookie_session/10_cookie_session.iml" filepath="$PROJECT_DIR$/10_cookie_session/10_cookie_session.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12_JSON_AJAX/12_JSON_AJAX.iml" filepath="$PROJECT_DIR$/12_JSON_AJAX/12_JSON_AJAX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11_Filter/Filter_11.iml" filepath="$PROJECT_DIR$/11_Filter/Filter_11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaWebs.iml" filepath="$PROJECT_DIR$/JavaWebs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/book_static/book_static.iml" filepath="$PROJECT_DIR$/book_static/book_static.iml" />
+      <module fileurl="file://$PROJECT_DIR$/books/books.iml" filepath="$PROJECT_DIR$/books/books.iml" />
+      <module fileurl="file://$PROJECT_DIR$/temp_verification_code/temp_verification_code.iml" filepath="$PROJECT_DIR$/temp_verification_code/temp_verification_code.iml" />
+    </modules>
+  </component>
+</project>

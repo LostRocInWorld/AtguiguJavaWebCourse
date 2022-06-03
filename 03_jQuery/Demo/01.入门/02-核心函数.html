@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Title</title>
+	<script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+	<script type="text/javascript">
+		//核心函数的4个作用
+		$(function () {
+			alert("页面加载完成之后，自动调用");
+			
+			$("<div>"+
+				"    <span>div-span1</span>"+
+				"    <span>div-span2</span>"+
+				"  </div>").appendTo("body");
+		
+			alert($("button").length);
+			
+			//通过jQuery包装的DOM对象
+			var domObj = document.getElementById("btn01");
+			//alert(domObj);	//dom对象： [object HTMLButtonElement]
+			alert($(domObj));	//[object Object]
+			
+			//通过jQuery提供的API创建的对象
+			alert($("<h1></h1>"));
+			
+			//通过jQuery提供的API查询到的对象
+			alert($("#btn01"));
+			//
+		});
+	</script>
+</head>
+<body>
+
+	<button id="btn01">按钮1</button>
+	<button >按钮2</button>
+	<button >按钮3</button>
+
+</body>
+</html>

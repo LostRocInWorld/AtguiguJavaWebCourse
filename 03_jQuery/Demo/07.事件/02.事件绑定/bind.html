@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+<!--    rel属性是定义当前文档与目标文档的联系-->
+    <link href="./css/style.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="../../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+      $(function (){
+        //click()
+        // $("h5").click(function () { //传function是绑定事件
+        //   alert("h5绑定单击事件");
+        // });
+
+        // $("button").click(function (){
+        //   $("h5").click();//不传function是单击事件
+        // });
+
+        //mouseover()& mouseout()
+        // $("h5").mouseover(function () { //传function是绑定事件
+        //   console.log("鼠标移入h5");
+        // });
+        //
+        // $("h5").mouseout(function () { //传function是绑定事件
+        //   console.log("鼠标移出h5");
+        // });
+
+        //使用bind()绑定事件
+        // $("h5").bind("click mouseover mouseout",function (){
+        //   console.log("这是bind绑定的事件");
+        // });
+
+        // $("h5").one("click mouseover mouseout",function (){
+        //   console.log("这是one绑定的事件");
+        // });
+
+        // $("h5").unbind("click");  //解绑click事件
+        // $("h5").unbind(); //解绑所有事件
+
+          $("h5").live("click",function(){
+              alert("使用live给h5绑定单击事件");
+          });
+          $("<h5 class = \"head\">什么是jQuery</h5>").appendTo($("#panel"));
+
+
+
+      });
+    </script>
+</head>
+<body>
+  <div id="panel">
+    <h5 class = "head">什么是jQuery</h5>
+    <div class="content">
+      jQuery是继Prototype之后又一个优秀的Javascript类库。
+    </div>
+    <button>按钮</button>
+  </div>
+</body>
+</html>

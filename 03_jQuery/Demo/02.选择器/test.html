@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //1.属性选择器
+            $("#btn01").click(function () {
+                alert($("input[name!=newsletter]").length);
+            });
+
+            //2.表单属性
+            $("#btn02").click(function () {
+                alert($(":disabled")[0]);
+            });
+
+            //3.jQuery元素筛选
+            $("#btn03").click(function () {
+                // alert($("div").has("span").length);
+
+                // var $ps = $("p").not("#selected")
+                // $ps.each(function (index){
+                //     alert(this.innerHTML);
+                // });
+
+                //addClass(classValue)给jQuery对象加上指定class属性
+                // $("div:first").nextAll().addClass("after");
+
+                // $("div:first").nextUntil("span").addClass("after");
+
+                $("div:first").add("span").addClass("all"); //相当于$(div:first,span)
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+<!--    1.-->
+<input type="checkbox" name="newsletter" value="Hot Fuzz" disabled="disabled">Hot Fuzz</input>
+<!--    <input type="checkbox" name="newsletter" value="Cold Fusion"/>-->
+<!--    <input type="checkbox" name="accept" value="Evil Plans"/>-->
+
+<!--2.-->
+<!--    <input type="radio" name="xxx"/>-->
+<!--    <input type="text" name="1234" id="asd"/>-->
+<!--    <button id="btn01">选择</button>-->
+<!--    <button id="btn02">表单属性</button>-->
+
+<!--3.-->
+<!--    <div>div1</div>-->
+<!--    <div>div2</div>-->
+<!--    <div>div3<span>div中的span</span></div>-->
+
+<!--    <p>Hello</p><p id="selected">Hello Again</p>-->
+
+<div></div>
+<div></div>
+<div></div>
+<span></span>
+<div></div>
+<button id="btn03">jQuery元素筛选</button>
+<a href="javascript:void(0)" class="textbox-icon combo-arrow" icon-index="0" tabindex="-1" style="width: 18px; height: 20.0084px;" winautomationvisibilitylandmark="true"></a>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!--filter标签用于配置一个Filter过滤器-->
+    <filter>
+        <!--filter-name给filter起别名-->
+        <filter-name>AdminFilter</filter-name>
+        <!-- filter-class配置Filter的全类名-->
+        <filter-class>com.dustin.filter.AdminFilter</filter-class>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>password</param-value>
+        </init-param>
+        <init-param>
+            <param-name>url</param-name>
+            <param-value>jdbc:mysql://127.0.0.1:3306/book</param-value>
+        </init-param>
+    </filter>
+    <filter>
+        <filter-name>Filter1</filter-name>
+        <filter-class>com.dustin.filter.Filter1</filter-class>
+    </filter>
+    <filter>
+        <filter-name>Filter2</filter-name>
+        <filter-class>com.dustin.filter.Filter2</filter-class>
+    </filter>
+    <!--filter-mapping 配置Filter过滤器的拦截路径-->
+    <filter-mapping>
+        <!--filter-name 表示当前的拦截路径给那个filter使用-->
+        <filter-name>AdminFilter</filter-name>
+        <!--url-pattern 配置拦截路径
+            /   表示请求地址为  http://ip:port/工程路径    映射到IDEA的web目录
+            /admin/*    表示请求的地址为  http://ip:port/工程路径/admin/*   *代表所有资源
+        -->
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>Filter1</filter-name>
+        <url-pattern>/target.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>Filter2</filter-name>
+        <url-pattern>/target.jsp</url-pattern>
+    </filter-mapping>
+
+
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.dustin.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+</web-app>

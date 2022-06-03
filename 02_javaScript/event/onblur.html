@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>onblur</title>
+	<!-- <link rel="shortcut icon" href="#"/> -->
+	<script type="text/javascript">
+		//静态注册失去焦点事件
+		function onblurFun() {
+			//console是控制台对象，由javaScript语言提供，专门用来向浏览器的控制台打印输出。用于测试使用
+			//log()是打印的方法，类似java基础中system.out.println()
+			console.log("静态注册失去焦点事件");
+		}
+		
+		//动态注册失去焦点事件
+			window.onload = function () {//页面加载时执行(自己的理解)
+			/*  
+			 document是JavaScript语言提供的一个对象(文档)，表示整个页面的所有内容
+			 	getElementById:通过属性获取标签对象(元素)
+			
+			*/
+			//1.获取标签对象
+			var inputObj =document.getElementById("password");
+			//alert(btnObj);
+			//2.通过标签对象.事件名 = function(){}
+			inputObj.onblur = function(){
+				console.log("动态注册失去焦点事件");
+			}
+		}
+	</script>
+</head>
+<body>
+	用户名：<input type="text" onblur="onblurFun();"><br/>
+	密码：<input type="text" id="password"><br/>
+</body>
+</html>

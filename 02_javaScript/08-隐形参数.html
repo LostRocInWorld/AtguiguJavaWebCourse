@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>08-隐形参数</title>
+	<script type="text/javascript">
+ 		function fun(){
+			alert(arguments.length);	//查看参数个数(数组长度)
+			for(var i=0;i<arguments.length;i++){
+				alert(arguments[i]);
+			}
+			alert("无参函数");
+		}
+		
+		// fun(1,"ad","true");
+		
+		//需求：编写一个函数，用于计算所有参数相加的和并返回
+		function sum(num1,num2){
+			var result=0;
+			for(var i = 0;i<arguments.length;i++){
+				if(typeof(arguments[i])=="number")	//做数值才相加的限定
+				result+=arguments[i];
+			}
+			return result;
+		}
+		
+		alert("求和函数sum(1,2,4,6,90)="+sum(1,2,4,6,90));
+		alert("求和函数sum(1,2,abc,6,90)="+sum(1,2,"abc",6,90));
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

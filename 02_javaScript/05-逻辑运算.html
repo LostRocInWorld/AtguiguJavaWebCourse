@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>05-逻辑运算</title>
+	<script type="text/javascript">
+ 		var a =0;
+		if(a){
+			alert("零为真");
+		}else{
+			alert("零为假");
+		}
+		
+		var b=null;
+		if(b){
+			alert("null为真");
+		}else{
+			alert("null为假");
+		}
+		
+		var c=undefined;
+		if(c){
+			alert("undefined为真");
+		}else{
+			alert("undefined为假");
+		}
+		
+		var d="";
+		if(c){
+			alert("空串为真");
+		}else{
+			alert("空串为假");
+		}
+		
+		var a= "abc";
+		var b="true";
+		var d=false;
+		var c=null;
+		
+/* 		alert(a&&b);	//true
+		alert(b&&a);	//abc
+		alert(a&&d);	//false
+		alert(a&&c);	//null
+		alert(a&&d&&c);	//false
+		alert(a&&c&&d);	//null
+ */
+		alert(d||c);	//null
+		alert(c||d);	//false
+		
+		alert(a||d);	//abc
+		alert(b||a||c);	//true
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

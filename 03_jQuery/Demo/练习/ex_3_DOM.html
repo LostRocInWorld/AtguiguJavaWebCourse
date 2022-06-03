@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="styleB/css.css"/>
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //创建一个用于复用的删除函数
+            var deleteFun = function (){
+                alert("当前的this："+this);
+                var $trObj = $(this).parent().parent();
+                var name = $trObj.find("td:first").text()
+
+                if (confirm("你确定要删除" + $trObj.find("td:first").text() + "吗？")) {
+                    $trObj.remove();
+                }
+                return false;   //可以阻止元素的默认行为
+            };
+
+            //给submit绑定单击事件，创建一个行标签对象，添加到显示数据的表格中
+            $("#addEmpButton").click(function () {
+                //获取输入框,name,email,salary内容
+                var name = $("#empName").val();
+                var email = $("#email").val();
+                var salary = $("#salary").val();
+
+
+                var $trObj = $("  <tr>" +
+                    "    <td>" + name + "</td>" +
+                    "    <td>" + email + "</td>" +
+                    "    <td>" + salary + "</td>" +
+                    "    <td><a href=\"deleteEmp?id=003\">Delete</a></td>" +
+                    "  </tr>");
+                //添加到显示数据的表格中
+                $trObj.appendTo($("#employeeTable"));
+
+                //给新加行的a标签添加单击事件
+                $trObj.find("a").click(deleteFun);
+
+            });
+            // alert($("a").length);   //只给原来的三个a标签添加了单击事件
+            //给a标签(delete)添加单击事件
+
+            //复用了删除函数deleteFun
+            $("a").click(deleteFun);    //注意不要使用deleteFun()，这样是把deleteFun函数的返回值作为参数传给了click
+
+            //未复用删除函数时
+/*            $("a").click(function () {
+
+                //在事件响应的的function函数中，有一个this对象，这个this对象就是当前正在响应事件的dom对象
+                // alert(this);    //响应的是a标签
+                //取父元素的父元素删除
+                var $trObj = $(this).parent().parent();
+                var name = $trObj.find("td:first").text()
+                /!*
+                * confirm()是javaScript语言提供的一个确认提示框函数。提示传入的参数
+                * 当用户点击确定返回true，当用户点击了取消返回false
+                *
+                * *!/
+                // alert(confirm("你好"));
+                if (confirm("你确定要删除" + $trObj.find("td:first").text() + "吗？")) {
+                    $trObj.remove();
+                }
+                return false;   //可以阻止元素的默认行为
+            });*/
+        });
+    </script>
+</head>
+<body>
+
+<table id="employeeTable">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th>&nbsp;</th>
+    </tr>
+    <tr>
+        <td>Tom</td>
+        <td>tom@tom.com</td>
+        <td>5000</td>
+        <td><a href="deleteEmp?id=001">Delete</a></td>
+    </tr>
+    <tr>
+        <td>Jerry</td>
+        <td>jerry@sohu.com</td>
+        <td>8000</td>
+        <td><a href="deleteEmp?id=002">Delete</a></td>
+    </tr>
+    <tr>
+        <td>Bob</td>
+        <td>bob@tom.com</td>
+        <td>10000</td>
+        <td><a href="deleteEmp?id=003">Delete</a></td>
+    </tr>
+</table>
+
+<div id="formDiv">
+
+    <h4>添加新员工</h4>
+
+    <table>
+        <tr>
+            <td class="word">name:</td>
+            <td class="inp">
+                <input type="text" name="empName" id="empName"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="word">email:</td>
+            <td class="inp">
+                <input type="text" name="email" id="email"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="word">salary:</td>
+            <td class="inp">
+                <input type="text" name="salary" id="salary"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button id="addEmpButton" value="abc">
+                    Submit
+                </button>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>

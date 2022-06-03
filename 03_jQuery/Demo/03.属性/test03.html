@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#attr").click(function () {
+                //attr()
+                var nameValue = $(":checkbox:first").attr("name");  //获取
+                alert(nameValue);
+                $(":checkbox:first").attr("name", "abc");    //设置
+                alert($(":checkbox:first").attr("checked"));    //官方觉得返回undefined是一个错误
+
+
+            });
+            $("#prop").click(function () {
+                //prop()
+                alert($(":checkbox:first").prop("checked"));    //未选中状态下返回false
+                $(":checkbox:first").prop("checked", "checked"); //设置
+            });
+        });
+    </script>
+</head>
+<body>
+多选：
+<input name="checkbox" type="checkbox" value="checkbox1"/>checkbox1
+<input name="checkbox" type="checkbox" value="checkbox2"/>checkbox2
+<input name="checkbox" type="checkbox" value="checkbox3"/>checkbox3
+<br/>
+<button id="attr">attr()方法</button>
+<button id="prop">pro()方法</button>
+</select>
+</body>
+</html>

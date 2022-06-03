@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/05_Web" />
+    <file type="web" url="file://$PROJECT_DIR$/06_Servlet" />
+    <file type="web" url="file://$PROJECT_DIR$/07_Servlet" />
+    <file type="web" url="file://$PROJECT_DIR$/08_JSP" />
+    <file type="web" url="file://$PROJECT_DIR$/09_EL_JSTL" />
+    <file type="web" url="file://$PROJECT_DIR$/10_cookie_session" />
+    <file type="web" url="file://$PROJECT_DIR$/11_Filter" />
+    <file type="web" url="file://$PROJECT_DIR$/12_JSON_AJAX" />
+    <file type="web" url="file://$PROJECT_DIR$/books" />
+    <file type="web" url="file://$PROJECT_DIR$/temp_verification_code" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/05_Web/pom.xml" />
+        <option value="$PROJECT_DIR$/06_Servlet/pom.xml" />
+        <option value="$PROJECT_DIR$/07_Servlet/pom.xml" />
+        <option value="$PROJECT_DIR$/books/pom.xml" />
+        <option value="$PROJECT_DIR$/08_JSP/pom.xml" />
+        <option value="$PROJECT_DIR$/09_EL/pom.xml" />
+        <option value="$PROJECT_DIR$/09_EL_JSTL/pom.xml" />
+        <option value="$PROJECT_DIR$/10_cookie_session/pom.xml" />
+        <option value="$PROJECT_DIR$/temp_verification_code/pom.xml" />
+        <option value="$PROJECT_DIR$/11_filter/pom.xml" />
+        <option value="$PROJECT_DIR$/12_JSON_AJAX/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
